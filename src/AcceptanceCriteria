@@ -1,0 +1,16 @@
+
+Define the acceptance criteria (AC) for the core functionality of the app.
+
+	Given user is on book search app home page
+	When user search for book with key word
+	Then search results displayed
+
+	Given user is search results page
+	And user click on any search result
+	Then user see the book details (Author, Book Name, Published By)
+
+
+	Given user is search results page
+	And user click on any search result
+	Then user see the book details
+	And user can share it

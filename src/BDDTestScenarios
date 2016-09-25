@@ -1,0 +1,78 @@
+Scenario’s:
+
+    Given user on book search app home page
+    And I should be able to perform search by key word <search string >
+    Then I should see respective search results for <search results>
+
+      Examples:
+      |search string|search results
+      | Comic    | Comic|
+      | Drama    | Drama|
+      | Fiction    | Ficton|
+      | Action    | Action|
+      | History    | History|
+      | Poetry    | Poetry|
+      | Horror    | Horror |
+
+    Given user on book search app home page
+    And I should be able to perform search by author <search string >
+    Then I should see respective search results for <search results>
+
+      Examples:
+      |search string|search results
+      | Harry    | Harry|
+      | Li    | Li|
+
+    Given user on book search app home page
+    And I should be able to perform search by title <search string >
+    Then I should see respective search results for <search results>
+
+      Examples:
+      |search string|search results
+      | Achangels    | Archangels|
+      | Strange    | Strange|
+
+
+    Given user on book search app home page
+    And I should be able to perform search by published <search string >
+    Then I should see respective search results for <search results>
+
+      Examples:
+      |search string|search results
+      | Eternal Comics    | Eternal Comics    |
+      | Neil    | Neil|
+
+
+    Given user is on search results page
+    And user click on any search result
+    Then user should navigate to book detail page
+    And user see the <book title>
+    And user see the <book author>
+    And user see the <book published by>
+
+    Given user is on search results page
+    And user click on any search result
+    Then user should navigate to book detail page
+    And user see the ‘book cover page image if available’
+    And user see the ‘list of pages if available’
+
+    Given user is on search results page
+    And user click on any search result
+    Then user should navigate to book detail page
+    And user see the ‘book no cover page image’ when book image not available
+
+
+    Given user is search results page
+    And user click on any search result
+    Then user see the book details
+    And user can share it with <options>
+
+        Examples:
+        |options|
+        |WhatsApp|
+        |Google drive|
+        |Bluetooth|
+        |Google +|
+        |Message|
+        |Youtube}
+

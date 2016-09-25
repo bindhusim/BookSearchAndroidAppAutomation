@@ -1,0 +1,25 @@
+Answers or Assumptions:
+
+    1.How is search functionality designed?
+    It’s plain key word search
+
+    2.Will there be any auto suggest based on recent user search history?
+    This will be our future enhancement
+
+    3.Can we search book by?
+            Author – Yes
+            Title	- Yes
+            Key word (ex. Action, Drama, Comic, Fiction) - Yes
+
+   4. How are Search results displayed?
+    Search results displayed based on keyword ‘contains’
+
+    5.How is the book share designed?
+    Currently link will be shared when user clicks on the link, users should be forced to install app to read it
+    Users base can grow for app!
+
+    6.Can we save the book for future reading?
+    Future enhancement after login or user registration functionality is implemented
+
+    7.Can we rate the book?
+    May be in future enhancement

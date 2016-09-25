@@ -1,0 +1,17 @@
+List any uncertainties about the functionality as questions for the Product manager (PO), Devs or stakeholders.
+
+	1. How is search functionality designed?
+	2. Will it be plain key word search?
+ 	3. Will there be any auto suggest based on recent user search history?
+	4. Can we search book by?
+		Author
+		Title
+		Key word (ex. Action, Drama, Comic, Fiction)
+	5.How are Search results displayed?
+	 - based on equals to Search string/ based on contains to Search string
+	6.How is the book share designed?
+		-Book share by link
+		-Book share by pdf
+
+    7.Can we save the book for future reading?
+    8.Can we rate the book?
