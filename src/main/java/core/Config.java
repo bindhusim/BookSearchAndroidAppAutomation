@@ -17,6 +17,7 @@ public class Config {
     private  String platformVersion = "5.1" ;
     private  String platformName = "Android";
 
+
     // get android apk file path
     public String getApk(){
         return  apkFile.getAbsolutePath();
@@ -43,7 +44,7 @@ public class Config {
         return property;
     }
 
-    //needs implementation to read all from config file
+    //TO-DO this needs implementation to read all properties from config file
     public Properties getProperties(){
         return prop;
     }

@@ -1,11 +1,12 @@
 package stepdefinitons;
 
+import core.Driver;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import pageobjects.BookSearchHome;
+
 
 import java.net.InetAddress;
 
@@ -18,19 +19,25 @@ import java.net.InetAddress;
             "pretty", "html:target/cucumber-htmlreport/booksearch",
             "json:target/cucumber-htmlreport/booksearch/cucumber-report.json",
             "junit:taget/cucumber.xml/booksearch/cucumber-junit-report.xml" })
-    public class TestRunner extends BookSearchHome{
+    public class TestRunner {
 
-        public static BookSearchHome home;
 
-        @BeforeClass
+    @BeforeClass
         public static void setUp(){
+        Driver driver = new Driver();
             try {
                 System.out.println(" **********Calling set up in runner");
                 System.out.println("Running on machine : "
                         + InetAddress.getLocalHost().getHostName());
-                home.getBookSearchApp();
+                driver.getAndriodDriver();
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+
+    @AfterClass
+    public static void tearDown() {
+        Driver driver = new Driver();
+        driver.quit();
         }
     }
