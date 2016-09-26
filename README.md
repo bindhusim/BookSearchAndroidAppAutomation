@@ -1,27 +1,27 @@
 # BookSearchAndroidAppAutomation
 Book Search Android App Automation Using Appium , Design : Cucumber with Junit
 
-Get the code
+###Get the code
 Git:
 Git clone https://github.com/bindhusim/BookSearchAndroidAppAutomation.git
 cd BookSearchAndroidAppAutomation
-Use Maven
+###Use Maven
 Open a command window and run:
 mvn test
 This runs Cucumber features using Cucumber's JUnit runner. The @RunWith(Cucumber.class) annotation on theRunCukesTest class tells JUnit to kick off Cucumber.
-Use Ant
+###Use Ant
 Open a command window and run:
 ant download
 ant runcukes
 This runs Cucumber features using Cucumber's Command Line Interface (CLI) runner. Note that the RunCukesTestjunit class is not used at all. If you remove it (and the cucumber-junit jar dependency), it will run just the same.
-Use Gradle
+###Use Gradle
 Open a command window and run:
 gradlew test
 This runs Cucumber features using Cucumber's JUnit runner. The @RunWith(Cucumber.class) annotation on theRunCukesTest class tells JUnit to kick off Cucumber.
 Overriding options
 The Cucumber runtime parses command line options to know what features to run, where the glue code lives, what plugins to use etc. When you use the JUnit runner, these options are generated from the @CucumberOptions annotation on your test.
 Sometimes it can be useful to override these options without changing or recompiling the JUnit class. This can be done with the cucumber.options system property. The general form is:
-Using Maven:
+###Using Maven:
 mvn -Dcucumber.options="..." test
 Using Ant:
 JAVA_OPTIONS='-Dcucumber.options="..."' ant runcukes
@@ -30,9 +30,9 @@ gradlew -Dcucumber.options="..." test
 Let's look at some things you can do with cucumber.options. Try this:
 -Dcucumber.options="--help"
 That should list all the available options.
-IMPORTANT
+####IMPORTANT
 When you override options with -Dcucumber.options, you will completely override whatever options are hard-coded in your @CucumberOptions or in the script calling cucumber.api.cli.Main. There is one exception to this rule, and that is the --plugin option. This will not override, but add a plugin. The reason for this is to make it easier for 3rd party tools (such as Cucumber Pro) to automatically configure additional plugins by appending arguments to acucumber.properties file.
-Run a subset of Features or Scenarios
+###Run a subset of Features or Scenarios
 Specify a particular scenario by line (and use the pretty plugin, which prints the scenario back)
 -Dcucumber.options="classpath:features/ search.feature:4 --plugin pretty"
 This works because Maven puts ./src/test/java/features on your classpath. You can also specify files to run by filesystem path:
